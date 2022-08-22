@@ -1,0 +1,696 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0em;
+    padding: 0em;
+    background-color: #151515;
+}
+hr{
+    background-color: white;
+    height: 0.5em;
+    margin: 0;
+}
+//removes the underline in all links
+a{
+    text-decoration: none;
+}
+//Hero gradient css rules
+.HeroBackGround{
+    position: absolute;
+    background: linear-gradient(12deg, #62EA10, #00812d);
+    width: 100%;
+    height: 100vh;
+    z-index: -50;
+}
+//Text Overlay css rules
+.HeroTextOverlay{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        z-index: -45;
+        p{
+            text-align: center;
+            font-size: 3rem;
+            font-family: 'Black Ops One', cursive;
+            color: black;
+            opacity: 30%;
+            animation: WipeEnter 0.75s ease-out;
+        }
+    }
+//Hero image wrapper rules
+.HeroImgContainer{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // top: 21vh;
+    z-index: -30;
+    // img{
+    //     width: 35em;
+    // }
+}
+//Hero overlay css rules
+//Hero overlay css rules
+.HeroOverlay{
+    position: absolute;
+    z-index: -50;
+    width: 100%;
+    height: 100vh;
+}
+.TopOverlay{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+} 
+.TopOverlay:before
+{   
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(12deg, #62EA10, #00812d);
+    clip-path: polygon(0% 15%, 0% 60% ,100% 85%,100% 40%);
+}
+
+
+.GradientBackground{
+    background: linear-gradient(12deg, #62EA10, #00812d);
+}
+.BlackBackground{
+    background: #151515;
+}
+//page 1 css rules
+.Page1{
+    width: 100%;
+    height: 100vh;
+}
+//header css rules
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+    .Menu{
+        margin-right: 2em ;
+        width: 3em;
+        cursor: pointer;
+    }
+    .Logo{
+        margin-left: 2em;
+        cursor: pointer;
+    }
+}
+//nav bar css rules
+nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background: #0e0e0e;
+    width: 55%;
+    z-index: 99;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+    //close logo css rules
+    .Close{
+        float: right;
+        margin: 2.5em;
+        width: 2.5em;
+        cursor: pointer;
+    }
+    //side nav bar css rules
+    ul{
+        padding-right: 2em;
+        margin-top: 8em;
+        list-style-type: none;
+
+        //side bar link specific css rules
+        a{
+            color: #62EA10;
+            padding: 0.75em 1em;
+            display: block;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.45rem;
+            width: 100%;
+            //response animation once mouse hovers above
+            &:hover{
+                background: rgba(255, 255, 255, 0.237);
+            }
+        }
+    }
+}
+//position of side nav bar when the nav has been opened
+.Open-nav{
+    transform: translateX(0%);
+}
+
+//hero section css rules
+.Hero{
+    overflow-x: hidden;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //heading 1(Bring it on, Game mode) css rules
+    h1{
+        font-size: 3rem;
+        font-family: 'Black Ops One', cursive;
+        font-weight: 400;
+        margin: 0em;
+        padding: 0em;
+        color: white;
+        animation: DownintroLoad 2s forwards;
+        span{
+            display: inline-block;
+            animation: UpintroLoad 2s forwards;
+        }
+    }
+    .HeroSocials{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        img{
+            width: 1.75em;
+            cursor: pointer;
+        }
+    }
+}
+.Title{
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    margin: 0.5em;
+    text-align: center;
+    text-decoration: overline;
+}
+.Paragraph{
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 1.25rem;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+    font-weight: medium;
+
+}
+.TopNavArrow{
+    position: fixed;
+    width: 2.75em;
+    right: 0;
+    margin-right: 2em;
+    animation: MoveArrow 1s alternate-reverse infinite;
+    &:hover{
+        fill: #00812d;
+    }
+    
+}
+.Page2{
+    display: flex;
+    flex-direction: column;
+    .MyNFTs{
+        width: 18em;
+        border-radius: 8px;
+        margin: 5em auto 2em;
+        
+    }
+    section{
+        a{
+            
+            display: block;
+            background-color: #151515;
+            color: white;
+            border-radius: 5px;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            font-family: 'Black Ops One', cursive;
+            text-align: center;
+            padding-top: 0.25em;
+            padding-bottom: 0.25em;
+            font-size: 2rem;
+
+            
+        }
+    }
+}
+.Page3{
+    display: flex;
+    flex-direction: column;
+    .Title{
+        color: white;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+    .Paragraph{
+        color: white;
+    }
+}
+.Page5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .Title{
+        color: white;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+    .faq{
+        padding-left: 5vw;
+        padding-right: 5vw;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #ffffff;
+        cursor: pointer;
+        margin-bottom: 4em;
+        font-family: 'Covered By Your Grace', cursive;
+
+    }.question{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            font-size: 1.2rem;
+        }
+    }
+    .answer{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.75s ease-out;
+    }
+    p{  
+        color: #62EA10;
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+    .faq.active {
+        .answer{
+            max-height: 300px;
+        }
+        svg{
+            transform: rotate(180deg);
+            path{
+                fill: #62EA10;
+            }
+        }
+    }
+    svg{
+        transition: transform 0.4s ease-out;
+    }
+    
+}
+.Biglink{
+    background: linear-gradient(90deg, #62EA10, #00812d);
+    width: 100%;
+
+    a{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Black Ops One', cursive;
+        color: black;
+    }
+    p{
+        margin: 0em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: 'Fredoka One', cursive;
+        color: black;
+    }
+}
+footer{
+    background-color: #151515;
+    div{
+        width: 100%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        h1{
+            text-align: center;
+            font-family: 'Black Ops One', cursive;
+            font-size: 2rem;
+            font-weight: 400;
+            background-image: linear-gradient(90deg, #62EA10, #00812d);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+    ul{
+        text-align: center;
+        list-style-type: none;
+        font-size: 1.1rem;
+        padding: 0;
+        font-family: 'Fredoka One', cursive;
+        li{
+            margin-top: 1em;
+            margin-bottom: 1em;
+            a{
+                color: white;
+                &:hover{
+                    background: none;
+                    color: #62EA10;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+.footerinfo{
+    color: white;
+    text-align: center;
+}
+.footerSocials{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+        width: 1.75em;
+    }
+}
+.Buycollection{
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Black Ops One', cursive;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0em auto;
+}
+@media only screen and (min-width: 700px){
+    //wrapper css rules at screen width above 700px
+    //Hero css rules at screen width above 700px
+    .Hero{
+        margin-bottom: 6.5em;
+        h1{
+            font-size: 5.5rem;
+        }
+    }
+    .Page2{
+        display: flex;
+        flex-direction: column;
+        
+        .MyNFTs{
+            width: 28em;
+            border-radius: 8px;
+            margin: 6.5em auto 3em;
+        }
+        .Title{
+            text-align: center;
+            font-size: 3.5rem;
+        }
+        .Paragraph{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    .Title{
+        font-size: 3rem;
+    }
+    .Paragraph{
+        font-size: 1.15rem;
+    }
+    .HeroTextOverlay{
+        p{
+            font-size: 4.5rem;
+        }
+    }
+}
+@media only screen and (min-width: 1000px){
+    //wrapper css rules at screen width above 920px
+    header{
+    .Menu{
+            margin-right: 2em ;
+            width: 3em;
+            cursor: pointer;
+        }
+    .Logo{
+        margin-left: 2em;
+        cursor: pointer;
+        }
+    }
+
+    //Hero css rules at screen width above 920px
+    .Hero{
+        margin-bottom: 0.5em;
+        h1{
+            font-size: 7.5rem;
+        }
+    }
+    //remove the menu logo at screen width above 920px
+    .Menu{
+        display: none;
+    }
+    nav{
+        transform: translateX(0%);
+        position: unset;
+        margin-right: 2em;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+        .Close{
+            display: none;
+        }
+        ul{
+            display: flex;
+            animation: UpintroLoad 1.25s forwards;
+            margin: 0;
+            a{
+                color: white;
+                padding: 0em 1em;
+                text-align: right;
+                margin-bottom: 1.5em;
+                font-size: 1.75rem;
+                &:hover{
+                    background: none;
+                    color: #62EA10;
+                    font-size: 1.9rem;
+                }
+            }
+        }
+    }
+    .Biglink{
+    
+        a{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 3rem;
+        }
+}
+.HeroTextOverlay{
+    p{
+        font-size: 6rem;
+    }
+}
+}
+@media only screen and (min-width: 1240px){
+.Page2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    .MyNFTs{
+        width: 32em;
+        margin-top: 7em;
+        margin-left: 5em;
+        margin-bottom: 10em;
+        margin-right: 4em;
+    }
+    .Title{
+        font-family: 'Fredoka One', cursive;
+        text-align: left;
+        font-size: 3.5rem;
+        margin: 0;
+        padding-top: 0.5em;
+        text-decoration: overline;
+    }
+    .Paragraph{
+        font-family: 'Covered By Your Grace', cursive;
+        font-size: 1.5rem;
+        margin: 0;
+        padding-top: 0.5em;
+        text-align: left;
+    }
+    section{
+        margin-top: 6em;
+        margin-right: 5em; 
+    }
+}
+
+.Title{
+    font-size: 3.2rem;
+}
+.Paragraph{
+    font-size: 1.3rem;
+}
+.TeamMembers{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+    padding: 0em;
+    justify-content: space-between;
+    div{
+        img{
+            width: 280px;
+            height: auto;
+            padding-bottom: 0em;
+            margin-bottom: 10em;
+        }
+    }
+    }
+    footer{
+        div{
+            width: 80vw;
+            margin: 0em;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            font-size: 1.6rem;
+            padding: 0em;
+            li{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .HeroTextOverlay{
+        p{
+            font-size: 7.5rem;
+        }
+    }
+    .Page5{
+    
+        .faq{
+            padding-bottom: 1rem;
+        }
+        .question{
+            p{
+                font-size: 2.5rem;
+            }
+        }
+        p{  
+            font-size: 1.75rem;
+        }
+    }
+}
+@media only screen and (min-width: 1600px){
+    .Page2{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        
+        .MyNFTs{
+            width: 42em;
+            margin-top: 7em;
+            margin-left: 7em;
+            margin-bottom: 10em;
+            margin-right: 4em;
+        }
+        .Title{
+            text-align: left;
+            font-size: 3.5rem;
+            margin: 0;
+            padding-top: 0.5em;
+            text-decoration: overline;
+        }
+        .Paragraph{
+            font-size: 1.75rem;
+            margin: 0;
+            padding-top: 0.5em;
+            text-align: left;
+        }
+        section{
+            margin-top: 6em;
+            margin-right: 7em;
+            margin-left: 3em;
+        }
+    }
+    .Title{
+        font-size: 3.5rem;
+    }
+    .Paragraph{
+        font-size: 1.75rem;
+    }
+    .TeamMembers{
+        div{
+            img{
+                width: 350px;
+                height: auto;
+            }
+        }
+    }
+    .HeroTextOverlay{
+        p{
+            font-size: 10rem;
+        }
+    }
+    
+}
+
+//Introload for going down css rules
+@keyframes UpintroLoad {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+//Introload for going up css rules
+@keyframes DownintroLoad {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+    to {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+}
+@keyframes MoveArrow {
+    from {
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(0);
+        
+    }
+}
+@keyframes WipeEnter {
+    0% {
+        transform: scale(0, .025);
+    }
+    50% {
+        transform: scale(1, .025);
+    }
+}
